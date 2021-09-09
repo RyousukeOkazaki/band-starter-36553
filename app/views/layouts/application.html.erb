@@ -11,5 +11,8 @@
 
   <body>
     <%= yield %>
+    <% unless current_page?(root_path) %>
+      <%= link_to 'トップページへ戻る', root_path %>
+    <% end %>
   </body>
 </html>

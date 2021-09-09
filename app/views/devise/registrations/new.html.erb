@@ -4,22 +4,96 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :メールアドレス %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
+    <%= f.label :パスワード %>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <em>(最低<%= @minimum_password_length %>文字)</em>
     <% end %><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :パスワード（確認用） %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
+
+  <div class="field">
+    <%= f.label :ニックネーム %><br />
+    <%= f.text_field :nickname, placeholder: "ニックネーム" %>
+  </div>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">生年月日</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <div class='input-birth-wrap'>
+      <%= raw sprintf(
+                  f.date_select(
+                    :date_of_birth,
+                    class:'select-birth',
+                    id:"birth-date",
+                    use_month_numbers: true,
+                    prompt:'--',
+                    start_year: 1930,
+                    end_year: (Time.now.year - 5),
+                    date_separator: '%s'),
+                  "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= f.label :自己紹介 %><br />
+    <%= f.text_area :introduction, placeholder: "自己紹介を書いてください" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :楽器歴（半角数字） %><br />
+    <%= f.text_field :how_long_play, placeholder: "楽器歴を書いてください" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :ブランク（半角数字） %><br />
+    <%= f.text_field :how_long_blank, placeholder: "ブランクの長さを書いてください" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :バンド歴 %><br />
+    <%= f.text_field :how_long_band, placeholder: "バンド歴を書いてください" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :経験したバンド数 %><br />
+    <%= f.text_field :how_many_band, placeholder: "経験したバンド数を書いてください" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :オリジナル曲数 %><br />
+    <%= f.text_field :how_many_compose, placeholder: "作曲数を書いてください" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :好きなアーティスト %><br />
+    <%= f.text_field :favorite_artist, placeholder: "好きなグループ、アーティストを書いてください" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :音源リンク %><br />
+    <%= f.text_field :URL, placeholder: "音源のURLを貼ってください" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :音楽活動歴 %><br />
+    <%= f.text_area :career, placeholder: "活動の経歴を書いてください" %>
+  </div>
+
+
+
+
 
   <div class="actions">
     <%= f.submit "Sign up" %>
