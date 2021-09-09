@@ -11,7 +11,7 @@
 | how_long_blank      | integer | null: false               |
 | how_long_band       | integer | null: false               |
 | how_many_band       | integer | null: false               |
-| how_many_conpose    | integer | null: false               |
+| how_many_compose    | integer | null: false               |
 | favorite_artist     | string  | null: false               |
 | URL                 | string  | null: false               |
 | career              | text    | null: false               |
@@ -48,7 +48,7 @@
 | leader_ship_id    | integer    | null: false                    |
 | do_genre_id       | integer    | null: false                    |
 | order_style_id    | integer    | null: false                    |
-| tune_style_id     | integer    | null: false                    |
+| compose_style_id  | integer    | null: false                    |
 | belong_many_id    | integer    | null: false                    |
 | user              | references | null: false, foreign_key: true |
 
@@ -63,8 +63,8 @@
 | what_band           | text       | null: false                    |
 | why_band            | text       | null: false                    |
 | ideal_leader        | text       | null: false                    |
-| do_genre_id         | string     | null: false                    |
-| ordered_style_id    | string     |                                |
+| do_genre_id         | integer    | null: false                    |
+| ordered_style_id    | integer    |                                |
 | want_belong_many_id | integer    | null: false                    |
 | user                | references | null: false, foreign_key: true |
 
