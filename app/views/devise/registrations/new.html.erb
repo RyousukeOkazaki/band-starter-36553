@@ -47,51 +47,89 @@
   </div>
 
   <div class="field">
-    <%= f.label :自己紹介 %><br />
+    <%= f.label :自己紹介 %>
     <%= f.text_area :introduction, placeholder: "自己紹介を書いてください" %>
   </div>
 
   <div class="field">
-    <%= f.label :楽器歴（半角数字） %><br />
+    <%= f.label :楽器歴（半角数字） %>
     <%= f.text_field :how_long_play, placeholder: "楽器歴を書いてください" %>
   </div>
 
   <div class="field">
-    <%= f.label :ブランク（半角数字） %><br />
+    <%= f.label :ブランク（半角数字） %>
     <%= f.text_field :how_long_blank, placeholder: "ブランクの長さを書いてください" %>
   </div>
 
   <div class="field">
-    <%= f.label :バンド歴 %><br />
+    <%= f.label :バンド歴 %>
     <%= f.text_field :how_long_band, placeholder: "バンド歴を書いてください" %>
   </div>
 
   <div class="field">
-    <%= f.label :経験したバンド数 %><br />
+    <%= f.label :経験したバンド数 %>
     <%= f.text_field :how_many_band, placeholder: "経験したバンド数を書いてください" %>
   </div>
 
   <div class="field">
-    <%= f.label :オリジナル曲数 %><br />
+    <%= f.label :オリジナル曲数 %>
     <%= f.text_field :how_many_compose, placeholder: "作曲数を書いてください" %>
   </div>
 
   <div class="field">
-    <%= f.label :好きなアーティスト %><br />
+    <%= f.label :好きなアーティスト %>
     <%= f.text_field :favorite_artist, placeholder: "好きなグループ、アーティストを書いてください" %>
   </div>
 
   <div class="field">
-    <%= f.label :音源リンク %><br />
+    <%= f.label :音源リンク %>
     <%= f.text_field :URL, placeholder: "音源のURLを貼ってください" %>
   </div>
 
   <div class="field">
-    <%= f.label :音楽活動歴 %><br />
+    <%= f.label :音楽活動歴 %>
     <%= f.text_area :career, placeholder: "活動の経歴を書いてください" %>
   </div>
 
+  <div class="field">
+    <%= f.label :性別 %>
+    <%= f.collection_select(:sex_id, Sex.all, :id, :name, {}, {class:"sex-select"}) %>
+  </div>
 
+  <div class="field">
+    <%= f.label :性格 %>
+    <%= f.collection_select(:character_id, Character.all, :id, :name, {}, {class:"character-select"}) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :演奏パート %>
+    <%= f.collection_select(:what_play_id, WhatPlay.all, :id, :name, {}, {class:"what_play-select"}) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :好きなジャンル %>
+    <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"genre-select"}) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :都道府県 %>
+    <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"prefecture-select"}) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :活動日 %>
+    <%= f.collection_select(:active_day_id, ActiveDay.all, :id, :name, {}, {class:"active-select"}) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :演奏力の目安 %>
+    <%= f.collection_select(:skill_id, Skill.all, :id, :name, {}, {class:"skill-select"}) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :メンバー募集 or グループ加入 選択欄 %>
+    <%= f.collection_select(:leader_or_member_id, LeaderOrMember.all, :id, :name, {}, {class:"leader_or_member-select"}) %>
+  </div>
 
 
 
