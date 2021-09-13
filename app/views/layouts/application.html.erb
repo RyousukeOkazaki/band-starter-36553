@@ -10,6 +10,14 @@
   </head>
 
   <body>
+  <% if user_signed_in? %>
+    <%= "ようこそ！#{current_user.nickname}さん "%>
+    <%= link_to '会員情報編集画面', edit_user_registration_path %>
+    <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+  <% else %>
+    <%= link_to '会員登録画面へ', new_user_registration_path %>
+    <%= link_to 'ログイン画面へ', new_user_session_path %>
+  <% end %>
     <%= yield %>
     <% unless current_page?(root_path) %>
       <%= link_to 'トップページへ戻る', root_path %>

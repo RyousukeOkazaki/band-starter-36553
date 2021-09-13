@@ -1,0 +1,23 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        nickname: ニックネーム
+        date_of_birth: 生年月日
+        introduction: 自己紹介
+        how_long_play: 楽器歴
+        how_long_blank: ブランク
+        how_long_band: バンド歴
+        how_many_band: 経験したバンド数
+        how_many_compose: オリジナル曲数
+        favorite_artist: 好きなアーティスト
+        URL: 音源リンク
+        career: 音楽活動歴
+        active_day_id: 活動日
+        genre_id: ジャンル
+        leader_or_member_id: 募集希望または加入希望
+        prefecture_id: 居住都道府県
+        sex_id: 性別
+        skill_id: 演奏力の目安
+        what_play_id: 演奏パート
+        character_id: 性格
