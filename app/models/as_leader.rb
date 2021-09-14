@@ -1,5 +1,7 @@
 class AsLeader < ApplicationRecord
+  extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :user, optional: true
+  belongs_to :leader_ship, :do_genre, :order_style, :compose_style, :belong_many
 
   with_options presence: true do
     validates :what_band, :why_band, :ideal_member

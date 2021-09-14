@@ -7,6 +7,7 @@ class User < ApplicationRecord
   
   belongs_to :active_day, :character, :genre, :leader_or_member, :prefecture, :sex, :skill, :what_play
   has_one :as_leader
+  has_one :as_member
 
   with_options presence:true do
     validates :nickname, :date_of_birth, :introduction

@@ -17,4 +17,5 @@ class  DoGenre < ActiveHash::Base
 
   include ActiveHash::Associations
   has_many :as_leaders
+  has_many :as_members
 end
