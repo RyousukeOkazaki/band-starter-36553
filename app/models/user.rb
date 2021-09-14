@@ -6,6 +6,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   
   belongs_to :active_day, :character, :genre, :leader_or_member, :prefecture, :sex, :skill, :what_play
+  has_one :as_leader
 
   with_options presence:true do
     validates :nickname, :date_of_birth, :introduction
@@ -18,7 +19,7 @@ class User < ApplicationRecord
   with_options presence: true, numericality: { other_than: 1 , message: "を選んでください"} do
     validates :active_day_id, :character_id, :genre_id, :leader_or_member_id, :prefecture_id, :sex_id, :skill_id, :what_play_id
   end
-
+#アクティブハッシュにpresence:trueは不要。削除し単体テストの内容も一部要削除。
   
    
 end

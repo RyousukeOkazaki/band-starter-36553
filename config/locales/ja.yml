@@ -21,3 +21,13 @@ ja:
         skill_id: 演奏力の目安
         what_play_id: 演奏パート
         character_id: 性格
+      as_leader:
+        what_band: 理想のバンド像
+        why_band: バンド像の理由
+        ideal_member: 理想のメンバー像
+        how_long_leader: リーダー歴
+        leader_ship_id: リーダーシップ
+        do_genre_id: 最もやりたいジャンル
+        order_style_id: 演奏の指示
+        compose_style_id: 作曲のやり方
+        belong_many_id: 掛け持ち
