@@ -10,7 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_09_055238) do
+ActiveRecord::Schema.define(version: 2021_09_13_093417) do
+
+  create_table "as_leaders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.text "what_band", null: false
+    t.text "why_band", null: false
+    t.text "ideal_member", null: false
+    t.integer "how_long_leader", null: false
+    t.integer "leader_ship_id", null: false
+    t.integer "do_genre_id", null: false
+    t.integer "order_style_id", null: false
+    t.integer "compose_style_id", null: false
+    t.integer "belong_many_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_as_leaders_on_user_id"
+  end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "nickname", null: false
