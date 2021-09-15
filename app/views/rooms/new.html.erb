@@ -1,0 +1,5 @@
+<%= form_with(model: @room, url: rooms_path, local: true)do |f| %>
+  <%= f.label :ルーム名 %>
+  <%= f.text_field :name, placeholder: "ルーム名を入れてください" %>
+  <%= f.submit %>
+<% end %>

@@ -3,10 +3,15 @@
 
 <% if user_signed_in? %>
   <%= link_to '募集記事投稿', new_post_path %>
+  <%= link_to 'チャットルームを作る', new_room_path %>
 <% end %>
+
 
 <div>
 <%= link_to 'ユーザー一覧', users_path %>
+</div>
+<div>
+<%= link_to 'メッセージ', rooms_path %>
 </div>
 
 <% @posts.each do |post| %>

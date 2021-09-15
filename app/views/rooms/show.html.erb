@@ -1,0 +1,4 @@
+<%= @room.name %>
+
+<%= link_to '名前を変える', edit_room_path(@room) %>
+<%= link_to 'チャットを削除する', room_path(@room), method: :delete %>
