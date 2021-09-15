@@ -1,0 +1,50 @@
+<% if @post.errors.any? %>
+  <div id="error_explanation">
+    <h2>
+      <%= I18n.t("errors.messages.not_saved",
+                 count: @post.errors.count,
+                 resource: @post.class.model_name.human.downcase)
+       %>
+    </h2>
+    <ul>
+      <% @post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+<%#時間があればshareページを作成しrenderで処理 %>
+
+<%= form_with(model: @post, url: post_path(@post), local: true) do |f| %>
+  <div>
+    <%= f.label:タイトル %>
+    <%= f.text_field :title, placeholder:"（例:若者のオールディーズバンド！メンバー探してます）" %>
+  </div>
+  <div>
+    <%= f.label:内容 %>
+    <%= f.text_area :introduction, placeholder:"(例:最終的な目標はメジャーでプロになることです。まずはコピーから入り、人気が出てきたらオリジナル曲をいれていく予定です。)"  %>
+  </div>
+  <div>
+    <%= f.label:仮バンド名 %>
+    <%= f.text_field :band_name_idea, placeholder:"(例:ザ・ローリングロックス)" %>
+  </div>
+  <div>
+    <%= f.label:募集中のパート %>
+    <%= f.collection_select(:need_part_id, NeedPart.all, :id, :name, {}, {class:"need_part-select"}) %>
+  </div>
+  <div>
+    <%= f.label:活動地域 %>
+    <%= f.collection_select(:area_of_activity_id, AreaOfActivity.all, :id, :name, {}, {class:"area_of_activity-select"}) %>
+  </div>
+  <div>
+    <%= f.label:演奏するジャンル %>
+    <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"genre-select"}) %>
+  </div>
+  <div>
+    <%= f.label:活動方針 %>
+    <%= f.collection_select(:professional_or_id, ProfessionalOr.all, :id, :name, {}, {class:"proffessional_or-select"}) %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>
