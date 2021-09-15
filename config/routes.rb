@@ -9,6 +9,6 @@ Rails.application.routes.draw do
     post 'as_members', to: 'users/registrations#create_as_member'
   end
   root to: 'posts#index'
-  resources :posts, only: [:index, :new, :create]
+  resources :posts, only: [:index, :new, :create, :show]
   resources :users, only: [:index, :show]
 end
