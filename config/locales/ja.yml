@@ -38,3 +38,12 @@ ja:
         do_genre_id: 最もやりたいジャンル
         ordered_style_id: 演奏の指示
         want_belong_many_id: 掛け持ち
+      post:
+        title: タイトル
+        introduction: 募集内容
+        band_name_idea: 仮バンド名
+        need_part_id: 募集パート
+        area_of_activity_id: 活動地域
+        genre_id: 演奏するジャンル
+        professional_or_id: 活動方針
+

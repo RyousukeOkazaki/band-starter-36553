@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_14_082011) do
+ActiveRecord::Schema.define(version: 2021_09_15_074505) do
 
   create_table "as_leaders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "what_band", null: false
@@ -39,6 +39,20 @@ ActiveRecord::Schema.define(version: 2021_09_14_082011) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_as_members_on_user_id"
+  end
+
+  create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "title", null: false
+    t.text "introduction", null: false
+    t.string "band_name_idea", null: false
+    t.integer "need_part_id", null: false
+    t.integer "area_of_activity_id", null: false
+    t.integer "genre_id", null: false
+    t.integer "professional_or_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
