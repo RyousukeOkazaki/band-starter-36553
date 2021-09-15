@@ -5,7 +5,14 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   
-  belongs_to :active_day, :character, :genre, :leader_or_member, :prefecture, :sex, :skill, :what_play
+  belongs_to :active_day
+  belongs_to :character
+  belongs_to :genre
+  belongs_to :leader_or_member
+  belongs_to :prefecture
+  belongs_to :sex
+  belongs_to :skill
+  belongs_to :what_play
   has_one :as_leader
   has_one :as_member
 

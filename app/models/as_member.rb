@@ -1,7 +1,9 @@
 class AsMember < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :user, optional: true
-  belongs_to :do_genre, :ordered_style, :want_belong_many
+  belongs_to :do_genre
+  belongs_to :ordered_style
+  belongs_to :want_belong_many
 
   with_options presence: true do
     validates :what_band, :why_band, :ideal_leader
