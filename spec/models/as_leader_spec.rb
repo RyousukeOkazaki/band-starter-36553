@@ -33,11 +33,11 @@ RSpec.describe AsLeader, type: :model do
       @as_leader.do_genre_id=13
       expect(@as_leader).to be_valid
     end
-    it 'order_syle_idが2以上の半角数字なら保存できる' do
+    it 'order_style_idが2以上の半角数字なら保存できる' do
       @as_leader.order_style_id=2
       expect(@as_leader).to be_valid
     end
-    it 'order_syle_idが7以下の半角数字なら保存できる' do
+    it 'order_style_idが7以下の半角数字なら保存できる' do
       @as_leader.order_style_id=7
       expect(@as_leader).to be_valid
     end
