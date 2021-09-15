@@ -15,8 +15,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
       end
       session["devise.regist_data"] = {user: @user.attributes}
       session["devise.regist_data"][:user]["password"] = params[:user][:password]
-      @as_leader = @user.build_as_leader
-      render :new_as_leader
+      if session["devise.regist_data"][:user]["leader_or_member_id"]==2
+        @as_leader = @user.build_as_leader
+        render :new_as_leader
+      else
+        @as_member = @user.build_as_member
+        render :new_as_member
+      end
     end
 
     def create_as_leader
@@ -31,11 +36,25 @@ class Users::RegistrationsController < Devise::RegistrationsController
         sign_in(:user, @user)
       end
 
+      def create_as_member
+        @user = User.new(session["devise.regist_data"]["user"])
+        @as_member = AsMember.new(as_member_params)
+          unless @as_member.valid?
+            render :new_as_member and return
+          end
+          @user.build_as_member(@as_member.attributes)
+          @user.save
+          session["devise.regist_data"]["user"].clear
+          sign_in(:user, @user)
+        end
+
       private
       def as_leader_params
         params.require(:as_leader).permit(:what_band, :why_band, :ideal_member, :how_long_leader, :leader_ship_id, :do_genre_id, :order_style_id, :compose_style_id, :belong_many_id)
       end
-      
+      def as_member_params
+        params.require(:as_member).permit(:what_band, :why_band, :ideal_leader, :do_genre_id, :ordered_style_id, :want_belong_many_id)
+      end
 
   # GET /resource/sign_up
   # def new

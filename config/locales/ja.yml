@@ -31,3 +31,10 @@ ja:
         order_style_id: 演奏の指示
         compose_style_id: 作曲のやり方
         belong_many_id: 掛け持ち
+      as_member:
+        what_band: 理想のバンド像
+        why_band: バンド像の理由
+        ideal_leader: 理想のリーダー像
+        do_genre_id: 最もやりたいジャンル
+        ordered_style_id: 演奏の指示
+        want_belong_many_id: 掛け持ち
