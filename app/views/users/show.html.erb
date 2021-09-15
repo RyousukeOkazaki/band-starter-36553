@@ -1,0 +1,31 @@
+<%= link_to 'ユーザー一覧に戻る' ,users_path %>
+
+<%= @user.nickname %><br>
+<%= @user.date_of_birth %><br>
+<%= @user.introduction %><br>
+<%= @user.how_long_play %><br>
+<%= @user.how_long_blank %><br>
+<%= @user.how_long_band %><br>
+<%= @user.how_many_band %><br>
+<%= @user.how_many_compose %><br>
+<%= @user.favorite_artist %><br>
+<%= @user.URL %><br>
+<%= @user.career %><br>
+<%= @user.sex.name %><br>
+<%= @user.character.name %><br>
+<%= @user.what_play.name %><br>
+<%= @user.genre.name %><br>
+<%= @user.prefecture.name %><br>
+<%= @user.active_day.name %><br>
+<%= @user.skill.name %><br>
+<%= @user.leader_or_member.name %><br>
+
+<% if @user.leader_or_member_id==2 %>
+  <%= @user.as_leader.leader_ship.name %>
+
+<% elsif @user.leader_or_member_id==3 %>
+  <%= @user.as_member.do_genre.name %>
+  <%#一時、ActiveHashのnameが出力されないエラー発生。再度発生するようならsleepが必要かも%>
+<% else %>
+  <p>一部の情報が登録されていません</p>
+<% end %>

@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   end
   root to: 'posts#index'
   resources :posts, only: [:index]
+  resources :users, only: [:index, :show]
 end
