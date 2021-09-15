@@ -2,3 +2,7 @@
 <p>Find me in app/views/posts/index.html.erb</p>
 
 <%= link_to 'ユーザー一覧', users_path %>
+
+<% if user_signed_in? %>
+  <%= link_to '募集記事投稿', new_post_path %>
+<% end %>
