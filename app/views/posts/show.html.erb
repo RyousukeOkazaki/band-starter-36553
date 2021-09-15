@@ -1,5 +1,6 @@
-<%= link_to 'ユーザー一覧に戻る' ,posts_path %>
+<%= link_to 'トップページに戻る' ,root_path %>
 
+<div><%= link_to '編集画面に進む', edit_post_path(@post) %>
 <div><%= @post.title %></div>
 <div><%= @post.introduction %></div>
 <div><%= @post.band_name_idea %></div>
