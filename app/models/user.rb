@@ -15,6 +15,8 @@ class User < ApplicationRecord
   belongs_to :what_play
   has_one :as_leader
   has_one :as_member
+  has_many :user_rooms
+  has_many :rooms, through: :user_rooms
 
   with_options presence:true do
     validates :nickname, :date_of_birth, :introduction

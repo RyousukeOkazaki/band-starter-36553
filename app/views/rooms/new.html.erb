@@ -1,0 +1,29 @@
+<% if @room.errors.any? %>
+  <div id="error_explanation">
+    <h2>
+      <%= I18n.t("errors.messages.not_saved",
+                 count: @room.errors.count,
+                 resource: @proomclass.model_name.human.downcase)
+       %>
+    </h2>
+    <ul>
+      <% @room.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+<%#時間があればshareページを作成しrenderで処理 %>
+
+<%= form_with(model: @room, url: rooms_path, local: true)do |f| %>
+  <%= f.label :ルーム名 %>
+  <%= f.text_field :name, placeholder: "ルーム名を入れてください" %>
+  <select name="room[user_ids][]">
+    <option value="">チャットするユーザーを選んでください></option>
+    <% User.where.not(id: current_user.id).each do |user| %>
+      <option value=<%= user.id %>><%= user.nickname %></option>
+      <% end %>
+  </select>
+  <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
+  <%= f.submit %>
+<% end %>

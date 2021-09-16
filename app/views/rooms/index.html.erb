@@ -1,0 +1,5 @@
+<%= link_to 'チャットルームを作る', new_room_path %>
+
+<% @rooms.each do |room| %>
+<div>ルーム名: <%= link_to "#{room.name}", room_path(room) %></div>
+<% end %>
