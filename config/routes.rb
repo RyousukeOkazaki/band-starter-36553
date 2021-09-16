@@ -11,5 +11,7 @@ Rails.application.routes.draw do
   root to: 'posts#index'
   resources :posts
   resources :users, only: [:index, :show]
-  resources :rooms
+  resources :rooms do
+    resources :messages
+  end
 end
