@@ -9,9 +9,16 @@
 <div>参加者: <%= user.nickname %></div>
 <% end %>
 
-<%= form_with url: room_messages_path(@room), method: :post,id: "form" do |form| %>
-  <%= form.text_field :content, id: "content" %>
-  <%= form.submit '投稿する' ,id: "submit" %>
+<% if @messages %>
+  <div class="messagesArea"><%= render partial: "messages/message", locals: { messages: @messages} %></div>
+  <%#partial: "modules/message"からよくわからず書き換え%>
+<% else %>
+  <p>まだやり取りはありません</p>
+<% end %>
+
+<%= form_with(model: [@room, @message], url: room_messages_path(@room), method: :post, id: "form") do |form| %>
+  <%= form.text_field :content, class: "inputMessage", id: "content" %>
+  <%= form.submit '投稿する' , class: "submitiMessage",id: "submit" %>
 <% end %>
 <div>
 <%= link_to 'ルーム一覧に戻る', rooms_path %>
