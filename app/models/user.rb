@@ -17,6 +17,7 @@ class User < ApplicationRecord
   has_one :as_member
   has_many :user_rooms
   has_many :rooms, through: :user_rooms
+  has_many :messages
 
   with_options presence:true do
     validates :nickname, :date_of_birth, :introduction
