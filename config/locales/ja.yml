@@ -48,4 +48,6 @@ ja:
         professional_or_id: 活動方針
       room:
         name: チャットルーム名
+      message:
+        content: メッセージ
 
