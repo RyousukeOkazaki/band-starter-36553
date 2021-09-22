@@ -1,3 +1,8 @@
+/* side-headerのwidth=300px */
+/* main-footerのheight=60px */
+
+
+
 /* 以下、application.html.erb */
 
 .wrapper{
@@ -315,3 +320,67 @@ body {
 }
 
 /* color等、62行目周辺のbtnに記述 */
+
+.post-btn, .update-btn {
+  background-color: rgb(2, 24, 24);
+  margin: 50px auto;
+  display: block;
+  color: azure;
+  height: 70px;
+  width: 140px;
+  border-radius: 8px;
+  border: whitesmoke 1px solid;
+  font-family: 'Caveat', cursive;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.post-btn:hover, .update-btn:hover {
+  background-color: rgb(105, 110, 110);
+  transition: all 0.3s;
+}
+
+.recruitment-wrapper {
+  background-color: rgb(32, 28, 28);
+  width: 100%;
+  height: 80%;
+  /* 100%でメイン画面ちょうど。ズレは生じない */
+}
+
+.recruitment-field {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: gainsboro 1px solid;
+  width: 100%;
+}
+
+.recruitment-field-textarea {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: gainsboro 1px solid;
+
+}
+
+.recruitment-list {
+  border: tomato 1px solid;
+  width: 100%;
+}
+
+.recruitment-list-textarea {
+  border: violet solid 2px;
+  width: 300px;
+  height: 90px;
+}
+
+.recruitment-box {
+  border: springgreen 1px solid;
+  width: 300px;
+  height: 30px;
+}
+
+.recruitment-box-textarea {
+  border: yellow 1px solid;
+  width: 300ox;
+  height: 90px;
+}

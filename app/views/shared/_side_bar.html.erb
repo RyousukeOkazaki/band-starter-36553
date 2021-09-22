@@ -11,8 +11,8 @@
       <div class="bottom-user-data">
         <div><%= "#{current_user.nickname}'s Data "%></div>
         <div><%= "#{current_user.sex.name}(#{@current_user_age}歳 #{current_user.prefecture.name})" %></div>
-        <% if @post && !current_page?(new_post_path) %>
-          <div><%= "#{@post.need_part.name}募集中" %></div>
+        <% if @current_post && !current_page?(new_post_path) %>
+          <div><%= "#{@current_post.need_part.name}募集中" %></div>
         <% end %>
       </div>
       <ul>

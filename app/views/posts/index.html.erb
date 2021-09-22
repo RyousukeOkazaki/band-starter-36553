@@ -8,9 +8,13 @@
     </div>
 
     <div class="main-contents">
-      <% if user_signed_in? && current_user.leader_or_member_id == 2 %>
+      <% if user_signed_in? && current_user.leader_or_member_id == 2 && @post.blank? %>
         <div class="user-block">
           <div class="recruitment"><%= link_to '募集する', new_post_path, class:"recruitment-btn" %></div>
+        </div>
+      <% elsif user_signed_in? && current_user.leader_or_member_id == 2 %>
+        <div class="user-block">
+          <div class="recruitment"><%= link_to '再募集', edit_post_path(@post), class:"recruitment-btn" %></div>
         </div>
       <% elsif !user_signed_in? %>
         <div class="user-block">

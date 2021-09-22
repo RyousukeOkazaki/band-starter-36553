@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   before_action :basic_auth
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :current_user_age, if: :user_signed_in?
+  before_action :current_post, if: :user_signed_in?
 
   private
 
@@ -17,5 +18,9 @@ class ApplicationController < ActionController::Base
 
   def current_user_age
     @current_user_age = (Date.today.strftime("%Y%m%d").to_i - current_user.date_of_birth.strftime("%Y%m%d").to_i)/ 10000
+  end
+
+  def current_post
+      @current_post = Post.find_by(user_id: current_user.id)
   end
 end

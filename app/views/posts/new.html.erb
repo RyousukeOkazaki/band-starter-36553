@@ -1,25 +1,5 @@
 <div class="background">
-<% if @post.errors.any? %>
-  <div id="error_explanation">
-    <h2>
-      <%= I18n.t("errors.messages.not_saved",
-                 count: @post.errors.count,
-                 resource: @post.class.model_name.human.downcase)
-       %>
-    </h2>
-    <ul>
-      <% @post.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-        
-      <% end %>
-    </ul>
-  </div>
-<% else %>
-  <div id="error_explanation">
-    <h2>入力エラーはありません</h1>
-  </div>
-<% end %>
-<%#時間があればshareページを作成しrenderで処理 %>
+<%= render "posts/shared/error_messages", resource: @post %>
 
 <%= form_with(model: @post, url: posts_path, local: true) do |f| %>
   <div class="field">
@@ -51,7 +31,7 @@
     <%= f.collection_select(:professional_or_id, ProfessionalOr.all, :id, :name, {}, {class:"proffessional_or-select box"}) %>
   </div>
   <div>
-    <%= f.submit "投稿する", class:"next-btn" %>
+    <%= f.submit "投稿する", class:"post-btn" %>
   </div>
 <% end %>
 </div>
