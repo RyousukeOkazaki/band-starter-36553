@@ -4,18 +4,18 @@
 </div>
 
 <div class="main-contents">
-  <% unless user_signed_in? %>
+    
+
+  <% if user_signed_in? && current_user.leader_or_member_id == 2 %>
+    <div class="user-block">
+      <div class="recruitment"><%= link_to '募集する', new_post_path, class:"recruitment-btn" %></div>
+    </div>
+  <% elsif !user_signed_in? %>
     <div class="user-block">
       <div class="registration"><%= link_to '会員登録', new_user_registration_path, class:"user-btn" %></div>
-        <div class="login"><%= link_to 'ログイン', new_user_session_path, class:"user-btn" %></div>
+      <div class="login"><%= link_to 'ログイン', new_user_session_path, class:"user-btn" %></div>
     </div>
-  <% end %>
-
-  <% if user_signed_in? %>
-    <div>
-      <%= link_to '募集記事投稿', new_post_path %>
-      <%= link_to 'チャットルームを作る', new_room_path %>
-    </div>
+  <% else %>
   <% end %>
 </div>
 

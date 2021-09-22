@@ -10,6 +10,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
       @user = User.new(session["devise.regist_data"]["user"])
       render :new
       return
+      #他ページに遷移したりページを閉じた場合にsessionを消去する処理の追加が必要。他ユーザー登録時に反映されるリスクあり
     end
 
   end
