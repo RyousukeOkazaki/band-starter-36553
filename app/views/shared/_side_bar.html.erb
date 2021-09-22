@@ -11,14 +11,13 @@
       <div class="bottom-user-data">
         <div><%= "#{current_user.nickname}'s Data "%></div>
         <div><%= "#{current_user.sex.name}(#{@current_user_age}歳 #{current_user.prefecture.name})" %></div>
-        <% if current_user.leader_or_member_id == 2 %>
-          <div><%#= current_user.as_leader. %></div>
+        <% if @post && !current_page?(new_post_path) %>
+          <div><%= "#{@post.need_part.name}募集中" %></div>
         <% end %>
       </div>
-
       <ul>
         <li><%= link_to 'Edit', edit_user_registration_path, class:"side-btn" %></li>
-        <li><%= link_to 'Logtut', destroy_user_session_path, method: :delete, class:"side-btn" %></li>
+        <li><%= link_to 'Logout', destroy_user_session_path, method: :delete, class:"side-btn" %></li>
       </ul>
     </div>
     <% end %>

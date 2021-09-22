@@ -1,26 +1,40 @@
-<div class="header">
-  <h1 class="logo">Band Starter</h1>
-  <p class="description">Find good players and Have fun days .</p>
-</div>
+<div class="index-container">
 
-<div class="main-contents">
-    
+  <div class="area">
 
-  <% if user_signed_in? && current_user.leader_or_member_id == 2 %>
-    <div class="user-block">
-      <div class="recruitment"><%= link_to '募集する', new_post_path, class:"recruitment-btn" %></div>
+    <div class="header">
+      <h1 class="logo">Band Starter</h1>
+      <p class="description">Find good players and Have fun days .</p>
     </div>
-  <% elsif !user_signed_in? %>
-    <div class="user-block">
-      <div class="registration"><%= link_to '会員登録', new_user_registration_path, class:"user-btn" %></div>
-      <div class="login"><%= link_to 'ログイン', new_user_session_path, class:"user-btn" %></div>
-    </div>
-  <% else %>
-  <% end %>
-</div>
 
-<div class="sub-contents">
-  <% @posts.each do |post| %>
-    <div><%= link_to "#{post.title}", post_path(post) %></div>
-  <% end %>
+    <div class="main-contents">
+      <% if user_signed_in? && current_user.leader_or_member_id == 2 %>
+        <div class="user-block">
+          <div class="recruitment"><%= link_to '募集する', new_post_path, class:"recruitment-btn" %></div>
+        </div>
+      <% elsif !user_signed_in? %>
+        <div class="user-block">
+          <div class="registration"><%= link_to '会員登録', new_user_registration_path, class:"user-btn" %></div>
+          <div class="login"><%= link_to 'ログイン', new_user_session_path, class:"user-btn" %></div>
+        </div>
+      <% else %>
+      <% end %>
+    </div>
+
+  </div>
+
+
+  <div class="sub-contents area">
+    <div class="post-block">
+      <div class="post-title-top">タイトル</div>
+      <div class="post-user-top">投稿者</div>
+    </div>
+    <% @posts.each do |post| %>
+      <div class="post-block">
+        <div class="post-title"><%= link_to "「#{post.title}(#{post.area_of_activity.name})」", post_path(post), class:"sub-contents post-title-link" %></div>
+        <div class="post-user"><%= link_to "by #{post.user.nickname}(#{(Date.today.strftime("%Y%m%d").to_i - post.user.date_of_birth.strftime("%Y%m%d").to_i)/ 10000}歳 #{post.user.sex.name})", user_path(post.user), class:"post-user-link" %></div>
+      </div>
+    <% end %>
+  </div>
+
 </div>

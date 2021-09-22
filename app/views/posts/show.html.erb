@@ -1,7 +1,4 @@
-<%= link_to 'トップページに戻る' ,root_path %>
 
-<div><%= link_to '編集画面に進む', edit_post_path(@post) %></div>
-<div><%= link_to '投稿記事を削除する', post_path(@post), method: :delete %></div>
 <div><%= @post.title %></div>
 <div><%= @post.introduction %></div>
 <div><%= @post.band_name_idea %></div>
@@ -10,3 +7,5 @@
 <div><%= @post.genre.name %></div>
 <div><%= @post.professional_or.name %></div>
 
+<div><%= link_to '編集画面に進む', edit_post_path(@post) %></div>
+<div><%= link_to '投稿記事を削除する', post_path(@post), method: :delete %></div>

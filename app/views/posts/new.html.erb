@@ -1,3 +1,4 @@
+<div class="background">
 <% if @post.errors.any? %>
   <div id="error_explanation">
     <h2>
@@ -9,42 +10,48 @@
     <ul>
       <% @post.errors.full_messages.each do |message| %>
         <li><%= message %></li>
+        
       <% end %>
     </ul>
+  </div>
+<% else %>
+  <div id="error_explanation">
+    <h2>入力エラーはありません</h1>
   </div>
 <% end %>
 <%#時間があればshareページを作成しrenderで処理 %>
 
 <%= form_with(model: @post, url: posts_path, local: true) do |f| %>
-  <div>
+  <div class="field">
     <%= f.label:タイトル %>
-    <%= f.text_field :title, placeholder:"（例:若者のオールディーズバンド！メンバー探してます）" %>
+    <%= f.text_field :title, placeholder:"（例:20代オールディーズバンド！）", class: "box" %>
   </div>
-  <div>
+  <div class="field-textarea">
     <%= f.label:内容 %>
-    <%= f.text_area :introduction, placeholder:"(例:最終的な目標はメジャーでプロになることです。まずはコピーから入り、人気が出てきたらオリジナル曲をいれていく予定です。)"  %>
+    <%= f.text_area :introduction, placeholder:"(例:最終的な目標はメジャーでプロになることです。まずはコピーから入り、人気が出てきたらオリジナル曲をいれていく予定です。)", class: "box-textarea"  %>
   </div>
-  <div>
+  <div class="field">
     <%= f.label:仮バンド名 %>
-    <%= f.text_field :band_name_idea, placeholder:"(例:ザ・ローリングロックス)" %>
+    <%= f.text_field :band_name_idea, placeholder:"(例:ローリングストーンズ)", class: "box" %>
   </div>
-  <div>
+  <div class="field">
     <%= f.label:募集中のパート %>
-    <%= f.collection_select(:need_part_id, NeedPart.all, :id, :name, {}, {class:"need_part-select"}) %>
+    <%= f.collection_select(:need_part_id, NeedPart.all, :id, :name, {}, {class:"need_part-select box"}) %>
   </div>
-  <div>
+  <div class="field">
     <%= f.label:活動地域 %>
-    <%= f.collection_select(:area_of_activity_id, AreaOfActivity.all, :id, :name, {}, {class:"area_of_activity-select"}) %>
+    <%= f.collection_select(:area_of_activity_id, AreaOfActivity.all, :id, :name, {}, {class:"area_of_activity-select box"}) %>
   </div>
-  <div>
+  <div class="field">
     <%= f.label:演奏するジャンル %>
-    <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"genre-select"}) %>
+    <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"genre-select box"}) %>
   </div>
-  <div>
+  <div class="field">
     <%= f.label:活動方針 %>
-    <%= f.collection_select(:professional_or_id, ProfessionalOr.all, :id, :name, {}, {class:"proffessional_or-select"}) %>
+    <%= f.collection_select(:professional_or_id, ProfessionalOr.all, :id, :name, {}, {class:"proffessional_or-select box"}) %>
   </div>
   <div>
-    <%= f.submit %>
+    <%= f.submit "投稿する", class:"next-btn" %>
   </div>
 <% end %>
+</div>

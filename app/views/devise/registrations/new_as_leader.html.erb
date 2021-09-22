@@ -5,14 +5,14 @@
   <%= render "devise/shared/error_messages", resource: @as_leader %>
 
 
-  <div class="field">
+  <div class="field-textarea field-top">
     <%= f.label :理想のバンド像 %><br />
-    <%= f.text_area :what_band, placeholder: "理想のバンド像について書いてください", class:"box" %>
+    <%= f.text_area :what_band, placeholder: "理想のバンド像について書いてください", class:"box-textarea" %>
   </div>
 
-  <div class="field">
+  <div class="field-textarea">
     <%= f.label :上記のバンド像がなぜ理想か %>
-    <%= f.text_area :why_band, placeholder: "上記バンド像が理想である理由を書いてください", class:"box" %>
+    <%= f.text_area :why_band, placeholder: "上記バンド像が理想である理由を書いてください", class:"box-textarea" %>
   </div>
 
   <div class="field">

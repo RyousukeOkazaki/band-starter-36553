@@ -31,17 +31,25 @@
   padding-top: 200px;
 }
 
-.field, .form-group{
+.field, .field-textarea, .form-group{
   border-bottom: antiquewhite 0.2px solid;
   width: calc(100vw - 300px);
   display: flex;
   justify-content: space-between;
+}
 
+.field-top {
+  border-top: antiquewhite 0.2px solid;
 }
 
 .field {
   height: 30px;
   line-height: 30px;
+}
+
+.field-textarea {
+  height: 90px;
+  line-height: 90px;
 }
 
 .box {
@@ -51,6 +59,12 @@
   margin-right: 100px;
 }
 
+.box-textarea {
+  height: 90px;
+  width: 300px;
+  border-radius: 3px;
+  margin-right: 100px;
+}
 
 
 #user_date_of_birth_1i, #user_date_of_birth_2i, #user_date_of_birth_3i{

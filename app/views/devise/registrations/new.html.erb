@@ -8,6 +8,7 @@
     <%= f.label :メールアドレス %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"box"  %>
   </div>
+  <%#ここはborder-topがなくても見た目が綺麗なのでclassをそのままに%>
 
   <div class="field">
     <%= f.label :パスワード %>
@@ -47,9 +48,9 @@
     </div>
   </div>
 
-  <div class="field">
+  <div class="field-textarea">
     <%= f.label :自己紹介 %>
-    <%= f.text_area :introduction, placeholder: "自己紹介を書いてください", class:"box" %>
+    <%= f.text_area :introduction, placeholder: "自己紹介を書いてください", class:"box-textarea" %>
   </div>
 
   <div class="field">
@@ -87,9 +88,9 @@
     <%= f.text_field :URL, placeholder: "音源のURLを貼ってください", class:"box" %>
   </div>
 
-  <div class="field">
+  <div class="field-textarea">
     <%= f.label :音楽活動歴 %>
-    <%= f.text_area :career, placeholder: "活動の経歴を書いてください", class:"box" %>
+    <%= f.text_area :career, placeholder: "活動の経歴を書いてください", class:"box-textarea" %>
   </div>
 
   <div class="field">
