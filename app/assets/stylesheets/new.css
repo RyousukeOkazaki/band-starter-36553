@@ -1,0 +1,84 @@
+/* 以下、エラーメッセージ */
+
+#error_explanation {
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  height: 100px;
+  width: calc(100vw - 300px);
+  overflow: scroll;
+  background-color: rgb(1, 2, 7);
+  border: cornsilk solid 1px;
+  margin: 100px auto 100px;
+  padding: 5px 0 0 8px;
+  border-radius: 10px;
+  font-family: fantasy;
+}
+
+/* 以上、エラーメッセージ */
+
+.background{
+  background-image: url(back.jpeg);
+  background-color: rgba(163, 116, 159, 0.9);
+  background-blend-mode: color-burn;
+  background-size: cover;
+  height: calc(100vh - 60px);
+  overflow: scroll;
+  color: aliceblue;
+
+}
+
+.field, .form-group{
+  border-bottom: antiquewhite 0.2px solid;
+  width: calc(100vw - 300px);
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.field {
+  height: 30px;
+  line-height: 30px;
+}
+
+.box {
+  height: 30px;
+  width: 300px;
+  border-radius: 3px;
+  margin-right: 100px;
+}
+
+#user_date_of_birth_1i, #user_date_of_birth_2i, #user_date_of_birth_3i{
+  height: 30px;
+  width: 300px;
+  border-radius: 3px;
+  margin-right: 100px;
+}
+
+.form-group {
+
+}
+
+.actions {
+  
+}
+
+.next-btn {
+  background-color: rgb(2, 24, 24);
+  margin: 50px auto;
+  display: block;
+  color: azure;
+  height: 70px;
+  width: 140px;
+  border-radius: 8px;
+  border: whitesmoke 1px solid;
+  font-family: 'Caveat', cursive;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.next-btn:hover {
+  background-color: rgb(105, 110, 110);
+  transition: all 0.3s;
+}
+

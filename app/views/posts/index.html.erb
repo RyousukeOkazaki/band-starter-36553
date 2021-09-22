@@ -1,23 +1,26 @@
-<h1>トップページ</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
-
-
-<% if user_signed_in? %>
-<div>
-  <%= link_to '募集記事投稿', new_post_path %>
-  <%= link_to 'チャットルームを作る', new_room_path %>
-</div>
-<% end %>
-
-
-<div>
-<%= link_to 'ユーザー一覧', users_path %>
-</div>
-<div>
-<%= link_to 'チャットルーム一覧', rooms_path %>
+<div class="header">
+  <h1 class="logo">Band Starter</h1>
+  <p class="description">Find good players and Have fun days .</p>
 </div>
 
-<% @posts.each do |post| %>
-  <div><%= link_to "#{post.title}", post_path(post) %></div>
-<% end %>
+<div class="main-contents">
+  <% unless user_signed_in? %>
+    <div class="user-block">
+      <div class="registration"><%= link_to '会員登録', new_user_registration_path, class:"user-btn" %></div>
+        <div class="login"><%= link_to 'ログイン', new_user_session_path, class:"user-btn" %></div>
+    </div>
+  <% end %>
 
+  <% if user_signed_in? %>
+    <div>
+      <%= link_to '募集記事投稿', new_post_path %>
+      <%= link_to 'チャットルームを作る', new_room_path %>
+    </div>
+  <% end %>
+</div>
+
+<div class="sub-contents">
+  <% @posts.each do |post| %>
+    <div><%= link_to "#{post.title}", post_path(post) %></div>
+  <% end %>
+</div>

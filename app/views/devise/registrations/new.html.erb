@@ -1,11 +1,12 @@
-<h2>Sign up</h2>
+<div class="background">
+
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
     <%= f.label :メールアドレス %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"box"  %>
   </div>
 
   <div class="field">
@@ -13,17 +14,17 @@
     <% if @minimum_password_length %>
     <em>(最低<%= @minimum_password_length %>文字)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= f.password_field :password, autocomplete: "new-password", class:"box" %>
   </div>
 
   <div class="field">
     <%= f.label :パスワード（確認用） %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"box" %>
   </div>
 
   <div class="field">
     <%= f.label :ニックネーム %><br />
-    <%= f.text_field :nickname, placeholder: "ニックネーム" %>
+    <%= f.text_field :nickname, placeholder: "ニックネーム", class:"box" %>
   </div>
 
   <div class="form-group">
@@ -48,94 +49,94 @@
 
   <div class="field">
     <%= f.label :自己紹介 %>
-    <%= f.text_area :introduction, placeholder: "自己紹介を書いてください" %>
+    <%= f.text_area :introduction, placeholder: "自己紹介を書いてください", class:"box" %>
   </div>
 
   <div class="field">
     <%= f.label :楽器歴（半角数字） %>
-    <%= f.text_field :how_long_play, placeholder: "楽器歴を書いてください" %>
+    <%= f.text_field :how_long_play, placeholder: "楽器歴を書いてください", class:"box" %>
   </div>
 
   <div class="field">
     <%= f.label :ブランク（半角数字） %>
-    <%= f.text_field :how_long_blank, placeholder: "ブランクの長さを書いてください" %>
+    <%= f.text_field :how_long_blank, placeholder: "ブランクの長さを書いてください", class:"box" %>
   </div>
 
   <div class="field">
     <%= f.label :バンド歴（半角数字） %>
-    <%= f.text_field :how_long_band, placeholder: "バンド歴を書いてください" %>
+    <%= f.text_field :how_long_band, placeholder: "バンド歴を書いてください", class:"box" %>
   </div>
 
   <div class="field">
     <%= f.label :経験したバンド数（半角数字） %>
-    <%= f.text_field :how_many_band, placeholder: "経験したバンド数を書いてください" %>
+    <%= f.text_field :how_many_band, placeholder: "経験したバンド数を書いてください", class:"box" %>
   </div>
 
   <div class="field">
     <%= f.label :オリジナル曲数（半角数字） %>
-    <%= f.text_field :how_many_compose, placeholder: "作曲数を書いてください" %>
+    <%= f.text_field :how_many_compose, placeholder: "作曲数を書いてください", class:"box" %>
   </div>
 
   <div class="field">
     <%= f.label :好きなアーティスト %>
-    <%= f.text_field :favorite_artist, placeholder: "好きなグループ、アーティストを書いてください" %>
+    <%= f.text_field :favorite_artist, placeholder: "好きなグループ、アーティストを書いてください", class:"box" %>
   </div>
 
   <div class="field">
     <%= f.label :音源リンク %>
-    <%= f.text_field :URL, placeholder: "音源のURLを貼ってください" %>
+    <%= f.text_field :URL, placeholder: "音源のURLを貼ってください", class:"box" %>
   </div>
 
   <div class="field">
     <%= f.label :音楽活動歴 %>
-    <%= f.text_area :career, placeholder: "活動の経歴を書いてください" %>
+    <%= f.text_area :career, placeholder: "活動の経歴を書いてください", class:"box" %>
   </div>
 
   <div class="field">
     <%= f.label :性別 %>
-    <%= f.collection_select(:sex_id, Sex.all, :id, :name, {}, {class:"sex-select"}) %>
+    <%= f.collection_select(:sex_id, Sex.all, :id, :name, {}, {class:"sex-select box"}) %>
   </div>
 
   <div class="field">
     <%= f.label :性格 %>
-    <%= f.collection_select(:character_id, Character.all, :id, :name, {}, {class:"character-select"}) %>
+    <%= f.collection_select(:character_id, Character.all, :id, :name, {}, {class:"character-select box"}) %>
   </div>
 
   <div class="field">
     <%= f.label :演奏パート %>
-    <%= f.collection_select(:what_play_id, WhatPlay.all, :id, :name, {}, {class:"what_play-select"}) %>
+    <%= f.collection_select(:what_play_id, WhatPlay.all, :id, :name, {}, {class:"what_play-select box"}) %>
   </div>
 
   <div class="field">
     <%= f.label :好きなジャンル %>
-    <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"genre-select"}) %>
+    <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"genre-select box"}) %>
   </div>
 
   <div class="field">
     <%= f.label :都道府県 %>
-    <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"prefecture-select"}) %>
+    <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"prefecture-select box"}) %>
   </div>
 
   <div class="field">
     <%= f.label :活動日 %>
-    <%= f.collection_select(:active_day_id, ActiveDay.all, :id, :name, {}, {class:"active-select"}) %>
+    <%= f.collection_select(:active_day_id, ActiveDay.all, :id, :name, {}, {class:"active-select box"}) %>
   </div>
 
   <div class="field">
     <%= f.label :演奏力の目安 %>
-    <%= f.collection_select(:skill_id, Skill.all, :id, :name, {}, {class:"skill-select"}) %>
+    <%= f.collection_select(:skill_id, Skill.all, :id, :name, {}, {class:"skill-select box"}) %>
   </div>
 
   <div class="field">
     <%= f.label :メンバー募集 or グループ加入 選択欄 %>
-    <%= f.collection_select(:leader_or_member_id, LeaderOrMember.all, :id, :name, {}, {class:"leader_or_member-select"}) %>
+    <%= f.collection_select(:leader_or_member_id, LeaderOrMember.all, :id, :name, {}, {class:"leader_or_member-select box"}) %>
   </div>
 
 
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "NEXT >", class:"next-btn" %>
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+</div>

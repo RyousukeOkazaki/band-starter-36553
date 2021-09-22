@@ -1,0 +1,16 @@
+<div class="side-header">
+  <div class="header-logo">Band Starter</div>
+  <div class="header-list">
+      <%# ログイン時、ユーザー名表示 %>
+    <% if user_signed_in? %>
+      <div><%= "ようこそ！#{current_user.nickname}さん "%></div>
+      <div><%= link_to '会員情報編集画面', edit_user_registration_path %></div>
+      <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+    <% end %>
+    <ul>
+      <li><%= link_to 'Top', root_path, class:"side-btn" %></li>
+      <li><%= link_to 'Users', users_path, class:"side-btn" %></li>
+      <li><%= link_to 'Rooms', rooms_path, class:"side-btn" %></li>
+    </ul>
+  </div>
+</div>

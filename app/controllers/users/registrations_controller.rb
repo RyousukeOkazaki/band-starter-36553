@@ -6,6 +6,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   def new
     @user = User.new
+    unless session["devise.regist_data"].blank?
+      @user = User.new(session["devise.regist_data"]["user"])
+      render :new
+      return
+    end
+
   end
 
   def create

@@ -4,24 +4,34 @@
     <title>BandStarter</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-  <% if user_signed_in? %>
-    <div><%= "ようこそ！#{current_user.nickname}さん "%></div>
-    <div><%= link_to '会員情報編集画面', edit_user_registration_path %></div>
-    <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
-  <% else %>
-    <%= link_to '会員登録画面へ', new_user_registration_path %>
-    <%= link_to 'ログイン画面へ', new_user_session_path %>
-  <% end %>
-    <%= yield %>
-    <% unless current_page?(root_path) %>
-      <%= link_to 'トップページへ戻る', root_path %>
-    <% end %>
+
+    <div class="wrapper">
+      <div class="side-bar">
+        <%# サイドバー呼び出し %>
+        <%= render "shared/side_bar" %>
+      </div>
+      <div class="main">
+        <div class="yield">
+          <%= yield %>
+        </div>
+        <div class="main-footer">
+          <div class="footer-logo">Band Starter Inc. All Right Reserved. Just kidding.</div>
+          <div class="footer-list">
+            <ul>
+              <li>会社概要</li>
+              <li>採用</li>
+              <li>お問合せ</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
