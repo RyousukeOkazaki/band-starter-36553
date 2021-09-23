@@ -1,6 +1,8 @@
 class RoomsController < ApplicationController
   def index
-    @rooms = Room.all
+    if user_signed_in?
+      @userrooms = UserRoom.where(user_id: current_user.id)
+    end
   end
 
   def show

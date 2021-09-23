@@ -114,3 +114,15 @@
   background-color: rgb(197, 0, 0);
   transition: all 0.3s;
 }
+
+/* as_leader_create, as_member_create */
+
+.registration-done {
+  color: aliceblue;
+  margin: 200px auto 0;
+  height: 60px;
+  width: 600px;
+  border-bottom: seashell solid 1px;
+  text-align: center;
+  font-size: 40px;
+}

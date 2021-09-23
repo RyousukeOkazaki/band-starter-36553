@@ -1,29 +1,27 @@
-<% if @room.errors.any? %>
-  <div id="error_explanation">
-    <h2>
-      <%= I18n.t("errors.messages.not_saved",
-                 count: @room.errors.count,
-                 resource: @proomclass.model_name.human.downcase)
-       %>
-    </h2>
-    <ul>
-      <% @room.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-    </ul>
-  </div>
-<% end %>
-<%#時間があればshareページを作成しrenderで処理 %>
+<div class="background">
 
-<%= form_with(model: @room, url: rooms_path, local: true)do |f| %>
-  <%= f.label :ルーム名 %>
-  <%= f.text_field :name, placeholder: "ルーム名を入れてください" %>
-  <select name="room[user_ids][]">
-    <option value="">チャットするユーザーを選んでください></option>
-    <% User.where.not(id: current_user.id).each do |user| %>
-      <option value=<%= user.id %>><%= user.nickname %></option>
-      <% end %>
-  </select>
-  <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
-  <%= f.submit %>
-<% end %>
+<%= render "rooms/shared/error_messages", resource: @room %>
+
+  <div class="room-index-wrapper">
+    <%= form_with(model: @room, url: rooms_path, local: true)do |f| %>
+      <div class="room-index-field-top">
+        <div><%= f.text_field :name, placeholder: "Room's Name", class:"room-index-box-top" %></div>
+      </div>
+      <div class="room-index-field-bottom">
+        <div class="room-index-box-bottom">
+          <select name="room[user_ids][]" >
+            <div>
+              <option value="">チャットするユーザーを選んでください></option>
+              <% User.where.not(id: current_user.id).each do |user| %>
+                <option value=<%= user.id %>><%= user.nickname %></option>
+              <% end %>
+            </div>
+          </select>
+        </div>
+      </div>
+        <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
+      <%= f.submit "Create Room", class:"post-btn" %>
+    <% end %>
+  </div>
+
+</div>

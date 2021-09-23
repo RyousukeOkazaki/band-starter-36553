@@ -1,7 +1,22 @@
-<p>チャットルーム一覧</p>
+<div class="background">
+  <div class="room-index-logo">Your Rooms</div>
 
-<%= link_to 'チャットルームを作る', new_room_path %>
+<% if user_signed_in? %>
 
-<% @rooms.each do |room| %>
-<div>ルーム名: <%= link_to "#{room.name}", room_path(room) %></div>
+  <% if @userrooms.present? %>
+    <div class="room-index-rooms">
+      <% @userrooms.each do |userroom| %>
+        <div class="room-index-room">Room: <%= link_to "#{userroom.room.name}", room_path(userroom.room) %></div>
+      <% end %>
+    </div>
+  <% end %>
+
+  <div class="rooms-index-make"><%= link_to 'Create', new_room_path, class:"rooms-index-make-link" %></div>
+
+<% else %>
+
+  <div class="room-index-description">Sorry! You Need to <%= link_to "Log In", new_user_session_path, class:"room-index-login-link" %>.</div>
+
 <% end %>
+
+</div>

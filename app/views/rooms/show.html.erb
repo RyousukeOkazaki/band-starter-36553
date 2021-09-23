@@ -1,9 +1,8 @@
 
 
-<div>
+<div class="background">
 <%= link_to 'ルーム名を変える', edit_room_path(@room) %>
 <%= link_to 'ルームを削除する', room_path(@room), method: :delete %>
-</div>
 <div>ルーム名: <%= @room.name %></div>
 <% @room.users.each do |user| %>
 <div>参加者: <%= user.nickname %></div>

@@ -1,0 +1,20 @@
+<% if @room.errors.any? %>
+  <div id="error_explanation">
+    <h2>
+      <%= I18n.t("errors.messages.not_saved",
+                 count: @room.errors.count,
+                 resource: @room.class.model_name.human.downcase)
+       %>
+    </h2>
+    <ul>
+      <% @room.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+        
+      <% end %>
+    </ul>
+  </div>
+<% else %>
+  <div id="error_explanation">
+    <h2>入力エラーはありません</h1>
+  </div>
+<% end %>
