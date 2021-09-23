@@ -7,6 +7,11 @@
     <div class="recruitment-box"><%= @post.title %></div>
   </div>
 
+  <div class="recruitment-field">
+    <div class="recruitment-list">投稿者</div>
+    <div class="recruitment-box"><%= link_to "#{@post.user.nickname}", user_path(@post.user), class:"post-show-user-link" %></div>
+  </div>
+
   <div class="recruitment-field-textarea">
     <div class="recruitment-list-textarea">内容</div>
     <div class="recruitment-box-textarea"><%= @post.introduction %></div>
@@ -37,8 +42,14 @@
     <div class="recruitment-box"><%= @post.professional_or.name %></div>
   </div>
 
+  
+<% if user_signed_in? && @post.user_id == current_user.id %>
+  <div class="post-show-bottom">
+  <div><%= link_to 'Edit', edit_post_path(@post), class:"post-edit-btn" %></div>
+  <div><%= link_to 'Delete', post_path(@post), method: :delete, class:"post-delete-btn" %></div>
+  </div>
+<% end %>
+
 </div>
 
-<div><%= link_to '編集画面に進む', edit_post_path(@post) %></div>
-<div><%= link_to '投稿記事を削除する', post_path(@post), method: :delete %></div>
 </div>

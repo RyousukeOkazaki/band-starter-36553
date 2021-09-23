@@ -1,3 +1,22 @@
-<% @users.each do |user| %>
-  <%= link_to "#{user.nickname}", user_path(user) %><br>
-<% end %>
+
+
+<div class="sub-contents area">
+    <div class="users-index-block">
+      <div class="users-index-nickname-top">名前</div>
+      <div class="users-index-prefecture-top">出身</div>
+      <div class="users-index-what-play-top">担当</div>
+      <div class="users-index-introduction-top">自己紹介</div>
+
+    </div>
+
+  <% @users.each do |user| %>
+      <div class="users-index-block">
+        <div class="users-index-nickname"><%= link_to "#{user.nickname}(#{(Date.today.strftime("%Y%m%d").to_i - user.date_of_birth.strftime("%Y%m%d").to_i)/ 10000}歳 #{user.sex.name})", user_path(user), class:"users-index-nickname-link" %></div>
+      
+<div class="users-index-prefecture"><%= user.prefecture.name %></div>
+<div class="users-index-what-play"><%= user.what_play.name %></div>
+        <div class="users-index-introduction"><%= user.introduction %></div>
+      </div>
+  <% end %>
+
+</div>

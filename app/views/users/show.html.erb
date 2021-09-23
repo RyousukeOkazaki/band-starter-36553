@@ -1,31 +1,138 @@
-<%= link_to 'ユーザー一覧に戻る' ,users_path %>
+<div class="background">
 
-<%= @user.nickname %><br>
-<%= @user.date_of_birth %><br>
-<%= @user.introduction %><br>
-<%= @user.how_long_play %><br>
-<%= @user.how_long_blank %><br>
-<%= @user.how_long_band %><br>
-<%= @user.how_many_band %><br>
-<%= @user.how_many_compose %><br>
-<%= @user.favorite_artist %><br>
-<%= @user.URL %><br>
-<%= @user.career %><br>
-<%= @user.sex.name %><br>
-<%= @user.character.name %><br>
-<%= @user.what_play.name %><br>
-<%= @user.genre.name %><br>
-<%= @user.prefecture.name %><br>
-<%= @user.active_day.name %><br>
-<%= @user.skill.name %><br>
-<%= @user.leader_or_member.name %><br>
+  <div class="user-wrapper">
 
+<div class="user-field">
+<div class="user-list">名前</div>
+<div class="user-box"><%= @user.nickname %></div>
+</div>
+
+
+<div class="user-field">
+<div class="user-list">年齢</div>
+<div class="user-box"><%= "#{(Date.today.strftime("%Y%m%d").to_i - @user.date_of_birth.strftime("%Y%m%d").to_i)/ 10000}歳" %></div>
+</div>
+
+
+<div class="user-field-textarea">
+<div class="user-list-textarea">自己紹介</div>
+<div class="user-box-textarea"><%= @user.introduction %></div>
+</div>
+
+
+<div class="user-field">
+<div class="user-list">楽器歴</div>
+<div class="user-box"><%= @user.how_long_play %></div>
+</div>
+
+
+<div class="user-field">
+<div class="user-list">ブランク</div>
+<div class="user-box"><%= @user.how_long_blank %></div>
+</div>
+
+
+<div class="user-field">
+<div class="user-list">バンド歴</div>
+<div class="user-box"><%= @user.how_long_band %></div>
+</div>
+
+
+<div class="user-field">
+<div class="user-list">経験したバンド数</div>
+<div class="user-box"><%= @user.how_many_band %></div>
+</div>
+
+
+<div class="user-field">
+<div class="user-list">オリジナル曲数</div>
+<div class="user-box"><%= @user.how_many_compose %></div>
+</div>
+
+
+<div class="user-field">
+<div class="user-list">好きなアーティスト</div>
+<div class="user-box"><%= @user.favorite_artist %></div>
+</div>
+
+
+<div class="user-field">
+<div class="user-list">音源リンク</div>
+<div class="user-box"><%= @user.URL %></div>
+</div>
+
+
+<div class="user-field-textarea">
+<div class="user-list-textarea">音楽活動歴</div>
+<div class="user-box-textarea"><%= @user.career %></div>
+</div>
+
+
+<div class="user-field">
+<div class="user-list">性別</div>
+<div class="user-box"><%= @user.sex.name %></div>
+</div>
+
+
+<div class="user-field">
+<div class="user-list">性格</div>
+<div class="user-box"><%= @user.character.name %></div>
+</div>
+
+
+<div class="user-field">
+<div class="user-list">演奏パート</div>
+<div class="user-box"><%= @user.what_play.name %></div>
+</div>
+
+
+<div class="user-field">
+<div class="user-list">好きなジャンル</div>
+<div class="user-box"><%= @user.genre.name %></div>
+</div>
+
+
+<div class="user-field">
+<div class="user-list">都道府県</div>
+<div class="user-box"><%= @user.prefecture.name %></div>
+</div>
+
+
+<div class="user-field">
+<div class="user-list">活動日</div>
+<div class="user-box"><%= @user.active_day.name %></div>
+</div>
+
+
+<div class="user-field">
+<div class="user-list">演奏力の目安</div>
+<div class="user-box"><%= @user.skill.name %></div>
+</div>
+
+
+<div class="user-field">
+<div class="user-list">区分</div>
+<div class="user-box"><%= @user.leader_or_member.name %></div>
+</div>
+
+<div class="user-field">
+<div class="user-list">希望</div>
+<div class="user-box">
 <% if @user.leader_or_member_id==2 %>
   <%= @user.as_leader.leader_ship.name %>
 
 <% elsif @user.leader_or_member_id==3 %>
   <%= @user.as_member.do_genre.name %>
-  <%#一時、ActiveHashのnameが出力されないエラー発生。再度発生するようならsleepが必要かも%>
 <% else %>
   <p>一部の情報が登録されていません</p>
 <% end %>
+</div>
+</div>
+
+<div class="user-show-bottm">
+  <%= link_to 'Players' ,users_path, class:"back-users-index-btn" %>
+</div>
+
+  </div>
+
+</div>

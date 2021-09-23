@@ -1,0 +1,185 @@
+/* users/show */
+
+.user-wrapper {
+  background-color: rgb(22, 21, 21);
+  width: 100%;
+  /* 100%でメイン画面ちょうど。ズレは生じない */
+  padding: 60px 50px 1px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+}
+
+.user-field {
+  display: flex;
+  justify-content: space-between;
+  border: gainsboro 1px solid;
+  width: 100%;
+  background-color: rgb(15, 15, 15);
+}
+
+.user-field-textarea {
+  display: flex;
+  justify-content: space-between;
+  border: gainsboro 1px solid;
+  background-color: rgb(15, 15, 15);
+}
+
+.user-list {
+  border-right: rgb(221, 221, 221) 2px solid;
+  width: 30%;
+  height: 30px;
+  line-height: 30px;
+}
+
+.user-list-textarea {
+  border-right: rgb(218, 218, 218) solid 2px;
+  width: 30%;
+  height: 90px;
+  line-height: 90px;
+}
+
+.user-box {
+  width: 70%;
+  height: 30px;
+  line-height: 30px;
+}
+
+.user-box-textarea {
+  width: 70%;
+  height: 90px;
+}
+
+.post-show-user-link {
+  color: aliceblue;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+}
+
+
+.user-show-bottom {
+  display: flex;
+  justify-content: space-around;
+}
+
+.back-users-index-btn {
+  background-color: rgb(2, 24, 24);
+  margin: 50px auto;
+  display: block;
+  color: azure;
+  height: 70px;
+  width: 140px;
+  border-radius: 8px;
+  border: whitesmoke 1px solid;
+  font-family: 'Caveat', cursive;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 70px;
+  text-align: center;
+}
+
+.back-users-index-btn:hover {
+  background-color: rgb(105, 110, 110);
+  transition: all 0.3s;
+}
+
+/* users/index */
+
+.users-index-block {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: rgba(253, 245, 230, 0.315) solid 0.2px;
+  height: 60px;
+}
+
+.users-index-nickname {
+  width: 30%;
+  font-size: 20px;
+  line-height: 60px;
+  padding: 0 15px;
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+.users-index-nickname-top {
+  width: 30%;
+  font-size: 18px;
+  line-height: 60px;
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+.users-index-nickname-link {
+  display: inline-block;
+  width: 100%;
+  text-decoration: none;
+  color: rgb(209, 206, 199);
+}
+
+.user-info {
+  font-size: 5px;
+}
+
+.users-index-prefecture {
+  width: 20%;
+  line-height: 60px;
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+  color: rgb(209, 206, 199);
+}
+
+.users-index-prefecture-top {
+  width: 20%;
+  padding: 30px 15px 0;
+  line-height: 10px;
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+
+
+.users-index-what-play-top {
+  width: 20%;
+  padding: 30px 15px 0;
+  line-height: 10px;
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+.users-index-what-play {
+  width: 20%;
+  line-height: 60px;
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+  color: rgb(209, 206, 199);
+}
+
+.users-index-introduction-top {
+  width: 30%;
+  padding: 30px 15px 0;
+  line-height: 10px;
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+.users-index-introduction {
+  width: 30%;
+  line-height: 60px;
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+  color: rgb(209, 206, 199);
+}
+
+.users-index-nickname:hover, .users-index-prefecture:hover, .users-index-what-play:hover, .users-index-introduction:hover {
+  background-color: rgba(253, 245, 230, 0.315);
+  color: antiquewhite;
+  transition: all 0.5s;
+}
+
+.users-index-nickname-link:hover, .users-index-user-link:hover {
+  color: antiquewhite;
+  transition: all 0.5s;
+}
