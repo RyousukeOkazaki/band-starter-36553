@@ -77,6 +77,7 @@ Band Starter
 15 投稿ボタン
 
 ・投稿編集画面
+<img width="1055" alt="スクリーンショット 2021-09-29 14 38 17" src="https://user-images.githubusercontent.com/88137414/135211312-b624e4cc-f221-4454-a120-0be0893ce594.png">
 
 16 投稿内容上書きボタン
 
