@@ -11,7 +11,7 @@ Band Starter
 ## アプリケーション概要
 
 本アプリはバンドメンバー募集アプリです。
-会員登録を行うことにより、メンバーを募集したり、他ユーザーとチャットでやりとりを行うことが可能です。
+会員登録を行うことにより、メンバーを募集したり、他ユーザーとチャットでやりとりを行ったり、といったことが可能です。
 
 ・トップページ（ログアウト時）
 <img width="1057" alt="スクリーンショット 2021-09-29 13 40 52" src="https://user-images.githubusercontent.com/88137414/135205286-4d5ffac6-c2f7-4c09-83d2-88fb49f0ae5e.png">
@@ -69,6 +69,7 @@ Band Starter
 
 
 13 記事投稿画面へのリンク
+
 14 記事編集画面へのリンク
 
 ・募集投稿画面
@@ -125,15 +126,23 @@ https://band-starter-36553.herokuapp.com/
 ## テスト用アカウント
 
 Basic認証
+
 ID: admin
+
 pass: 1111
 
+
 募集ユーザー
+
 email: a@a.a
+
 pass: aaa111
 
+
 加入ユーザー
+
 email: b@b.b
+
 pass: bbb111
 
 
@@ -141,15 +150,24 @@ pass: bbb111
 ## 利用方法
 
 ログアウト時
+
 ・投稿一覧を閲覧する
+
 ・ユーザー一覧を閲覧する
 
+
 ログイン時
+
 ・投稿一覧を閲覧する
+
 ・ユーザー一覧を閲覧する
+
 ・メンバーを募集する（※登録時、募集を希望したユーザーのみ）
+
 ・参加中のチャットルーム一覧を閲覧する
+
 ・チャットルームを作成する
+
 ・チャットを行う
 
 
@@ -353,16 +371,25 @@ pass: bbb111
 ## ローカルでの動作方法
 
 Mac OS Big Sur 11.4
+
 Ruby 2.6.5
+
 Ruby on Rails 6.0.0
+
 Ruby Gems 3.0.3
+
 MySQL 5.6.1
 
 $ git clone https://github.com/RyousukeOkazaki/band-starter-36553.git
+
 $ cd hoge
+
 $ bundle install
+
 $ rails db:create
+
 $ rails db:migrate
+
 $ rails s
 
 → http://localhost:3000
