@@ -45,6 +45,7 @@ Band Starter
 9 ログイン画面へのリンク
 
 ・ユーザー登録1ページ目（ページ下部から登録2ページ目へ遷移）
+
 [![Image from Gyazo](https://i.gyazo.com/a4057c33b05ea0e3d55baae9e56f1bca.gif)](https://gyazo.com/a4057c33b05ea0e3d55baae9e56f1bca)
 
 ・ユーザー登録2ページ目（募集）
