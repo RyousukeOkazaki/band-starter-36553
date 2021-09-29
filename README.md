@@ -45,7 +45,7 @@ Band Starter
 9 ログイン画面へのリンク
 
 ・ユーザー登録1ページ目（ページ下部から登録2ページ目へ遷移）
-[![Image from Gyazo](https://i.gyazo.com/a4057c33b05ea0e3d55baae9e56f1bca.gif)](https://gyazo.com/a4057c33b05ea0e3d55baae9e56f1bca)
+[![Image from Gyazo](https://i.gyazo.com/22451439a2197940d1bf0fb072a1da21.gif)](https://gyazo.com/22451439a2197940d1bf0fb072a1da21)
 
 ・ユーザー登録2ページ目（募集）
 [![Image from Gyazo](https://i.gyazo.com/da7e72e9ade4c6adc98d1ab7d3db0f1a.gif)](https://gyazo.com/da7e72e9ade4c6adc98d1ab7d3db0f1a)
@@ -92,21 +92,27 @@ Band Starter
 <img width="1054" alt="スクリーンショット 2021-09-29 14 42 44" src="https://user-images.githubusercontent.com/88137414/135209985-ec36cf49-df3b-4d13-a871-d51fd1427cb1.png">
 
 19 チャットルーム名入力欄
+
 20 チャットルームメンバー選択欄（プルダウン形式。選択は一名のみ）
+
 21 チャットルーム作成ボタン
 
 ・チャットルーム画面
 <img width="1598" alt="スクリーンショット 2021-09-29 14 47 37" src="https://user-images.githubusercontent.com/88137414/135210624-396f609d-bc6f-4435-a761-a224d61c245d.png">
 
 22 チャットルーム名編集画面へのリンク
+
 23 チャットルーム削除ボタン
+
 24 メッセージ入力欄
+
 25 メッセージ投稿ボタン
 
 ・チャットルーム名編集画面
 <img width="1057" alt="スクリーンショット 2021-09-29 14 52 19" src="https://user-images.githubusercontent.com/88137414/135210888-e2dea97d-9dff-4b17-940a-7342f92a84b0.png">
 
 26 チャットルーム名再入力欄
+
 27 チャットルーム名更新ボタン
 
 
@@ -346,8 +352,11 @@ pass: bbb111
 
 ## ローカルでの動作方法
 
+Mac OS Big Sur 11.4
+Ruby 2.6.5
 Ruby on Rails 6.0.0
-
+Ruby Gems 3.0.3
+MySQL 5.6.1
 
 $ git clone https://github.com/RyousukeOkazaki/band-starter-36553.git
 $ cd hoge
