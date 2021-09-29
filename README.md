@@ -45,7 +45,6 @@ Band Starter
 9 ログイン画面へのリンク
 
 ・ユーザー登録1ページ目（ページ下部から登録2ページ目へ遷移）
-
 [![Image from Gyazo](https://i.gyazo.com/a4057c33b05ea0e3d55baae9e56f1bca.gif)](https://gyazo.com/a4057c33b05ea0e3d55baae9e56f1bca)
 
 ・ユーザー登録2ページ目（募集）
@@ -71,6 +70,44 @@ Band Starter
 
 13 記事投稿画面へのリンク
 14 記事編集画面へのリンク
+
+・募集投稿画面
+<img width="1053" alt="スクリーンショット 2021-09-29 14 35 28" src="https://user-images.githubusercontent.com/88137414/135209238-99d5ce5f-f9cf-46d9-b3dd-7a519495e934.png">
+
+15 投稿ボタン
+
+・投稿編集画面
+
+16 投稿内容上書きボタン
+
+・チャットルーム一覧画面
+<img width="1060" alt="スクリーンショット 2021-09-29 14 39 59" src="https://user-images.githubusercontent.com/88137414/135209732-f474a33f-2cb9-4b89-a25d-fbaddbec665b.png">
+
+17 既存チャットルームのリンク
+
+18 チャットルーム作成画面へのリンク
+
+・チャットルーム作成画面
+<img width="1054" alt="スクリーンショット 2021-09-29 14 42 44" src="https://user-images.githubusercontent.com/88137414/135209985-ec36cf49-df3b-4d13-a871-d51fd1427cb1.png">
+
+19 チャットルーム名入力欄
+20 チャットルームメンバー選択欄（プルダウン形式。選択は一名のみ）
+21 チャットルーム作成ボタン
+
+・チャットルーム画面
+<img width="1598" alt="スクリーンショット 2021-09-29 14 47 37" src="https://user-images.githubusercontent.com/88137414/135210624-396f609d-bc6f-4435-a761-a224d61c245d.png">
+
+22 チャットルーム名編集画面へのリンク
+23 チャットルーム削除ボタン
+24 メッセージ入力欄
+25 メッセージ投稿ボタン
+
+・チャットルーム名編集画面
+<img width="1057" alt="スクリーンショット 2021-09-29 14 52 19" src="https://user-images.githubusercontent.com/88137414/135210888-e2dea97d-9dff-4b17-940a-7342f92a84b0.png">
+
+26 チャットルーム名再入力欄
+27 チャットルーム名更新ボタン
+
 
 ## URL
 
