@@ -80,11 +80,29 @@ pass: bbb111
 
 ・ユーザー登録分岐
 
+登録ページへ遷移
+[![Image from Gyazo](https://i.gyazo.com/d14de746aaf987bfbdc6221c4839892f.gif)](https://gyazo.com/d14de746aaf987bfbdc6221c4839892f)
+募集ユーザーとして登録
+[![Image from Gyazo](https://i.gyazo.com/1668b04d2396ebad24dfc22f1a2a1ff6.gif)](https://gyazo.com/1668b04d2396ebad24dfc22f1a2a1ff6)
+加入ユーザーとして登録
+[![Image from Gyazo](https://i.gyazo.com/7878a1410f42995ad34d3c8f4f89a642.gif)](https://gyazo.com/7878a1410f42995ad34d3c8f4f89a642)
 
 ・記事投稿機能
 
-・チャット機能
+投稿ページへ遷移
+[![Image from Gyazo](https://i.gyazo.com/20924da38c459c8a4aa7b5af99da57c2.gif)](https://gyazo.com/20924da38c459c8a4aa7b5af99da57c2)
+記事の投稿
+[![Image from Gyazo](https://i.gyazo.com/0ab040c0e57e3bbfc8252ddebc3a55c4.gif)](https://gyazo.com/0ab040c0e57e3bbfc8252ddebc3a55c4)
 
+・チャット機能
+チャットルームページを経由し、ルーム作成ページへ遷移
+[![Image from Gyazo](https://i.gyazo.com/f64e08ec1cba5c70e9ce3793fd9114d4.gif)](https://gyazo.com/f64e08ec1cba5c70e9ce3793fd9114d4)
+ルームを作成
+[![Image from Gyazo](https://i.gyazo.com/793a67a0e9503fbbe066dc2749a23fea.gif)](https://gyazo.com/793a67a0e9503fbbe066dc2749a23fea)
+ルームへ遷移
+[![Image from Gyazo](https://i.gyazo.com/ec54933e58841d961c0e647bce6b9f2a.gif)](https://gyazo.com/ec54933e58841d961c0e647bce6b9f2a)
+チャット
+[![Image from Gyazo](https://i.gyazo.com/b310c617fefbccb10917518336180f5a.gif)](https://gyazo.com/b310c617fefbccb10917518336180f5a)
 
 ## 実装予定の機能
 
