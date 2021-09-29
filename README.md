@@ -13,7 +13,62 @@ Band Starter
 本アプリはバンドメンバー募集アプリです。
 会員登録を行うことにより、メンバーを募集したり、他ユーザーとチャットでやりとりを行うことが可能です。
 
+・トップページ（ログアウト時）
+<img width="1057" alt="スクリーンショット 2021-09-29 13 40 52" src="https://user-images.githubusercontent.com/88137414/135205286-4d5ffac6-c2f7-4c09-83d2-88fb49f0ae5e.png">
+<img width="1056" alt="スクリーンショット 2021-09-29 13 55 18" src="https://user-images.githubusercontent.com/88137414/135205733-dec0aa4f-cb53-4fa2-bcf5-61fd1e5847a6.png">
 
+1 トップページ（現ページ）のリンク
+
+2 ユーザー一覧へのリンク
+
+3 チャットルームへのリンク
+
+4 ユーザー登録へのリンク
+
+5 ログインへのリンク
+
+6 投稿記事へのリンク
+
+7 投稿ユーザーページへのリンク
+
+・ユーザー一覧ページ
+<img width="1054" alt="スクリーンショット 2021-09-29 13 59 26" src="https://user-images.githubusercontent.com/88137414/135206136-77a5bc64-2629-4ce3-a209-b7629b9bc766.png">
+
+8 ユーザーページへのリンク
+
+・ユーザーページ（ページ下部からユーザー一覧へ遷移）
+[![Image from Gyazo](https://i.gyazo.com/2e6093a56fee9a998094cfc3fd482b09.gif)](https://gyazo.com/2e6093a56fee9a998094cfc3fd482b09)
+
+・チャットルーム一覧ページ（ログアウト時）
+<img width="1058" alt="スクリーンショット 2021-09-29 14 08 39" src="https://user-images.githubusercontent.com/88137414/135206856-902e06ad-2c15-424e-b3a8-14c72f4aae91.png">
+
+9 ログイン画面へのリンク
+
+・ユーザー登録1ページ目（ページ下部から登録2ページ目へ遷移）
+[![Image from Gyazo](https://i.gyazo.com/a4057c33b05ea0e3d55baae9e56f1bca.gif)](https://gyazo.com/a4057c33b05ea0e3d55baae9e56f1bca)
+
+・ユーザー登録2ページ目（募集）
+[![Image from Gyazo](https://i.gyazo.com/da7e72e9ade4c6adc98d1ab7d3db0f1a.gif)](https://gyazo.com/da7e72e9ade4c6adc98d1ab7d3db0f1a)
+・ユーザー登録2ページ目（加入）
+<img width="1052" alt="スクリーンショット 2021-09-29 14 17 30" src="https://user-images.githubusercontent.com/88137414/135207726-17649547-5949-4285-9c44-b401d080ce58.png">
+
+10 登録ボタン
+
+11 1ページ目へ戻る（1ページ目の入力内容は反映）
+
+・ログイン画面
+<img width="1055" alt="スクリーンショット 2021-09-29 14 20 14" src="https://user-images.githubusercontent.com/88137414/135207900-efbc7be7-c99c-43e5-8201-33c2a54c9a80.png">
+
+12 ログインボタン
+
+・トップページ（募集ユーザーでログイン時、未募集）
+<img width="1055" alt="スクリーンショット 2021-09-29 14 24 13" src="https://user-images.githubusercontent.com/88137414/135208213-c53960dc-9bd8-4fb3-8fe6-afaccddfc5be.png">
+・トップページ（募集ユーザーでログイン時、募集済）
+<img width="1061" alt="スクリーンショット 2021-09-29 14 27 03" src="https://user-images.githubusercontent.com/88137414/135208478-db896e74-468a-446c-a96b-5f33d0e1c846.png">
+
+
+13 記事投稿画面へのリンク
+14 記事編集画面へのリンク
 
 ## URL
 
