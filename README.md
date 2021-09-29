@@ -125,21 +125,23 @@ https://band-starter-36553.herokuapp.com/
 
 ## テスト用アカウント
 
-Basic認証
+【Basic認証】
 
 ID: admin
 
 pass: 1111
 
 
-募集ユーザー
+
+【募集ユーザー】
 
 email: a@a.a
 
 pass: aaa111
 
 
-加入ユーザー
+
+【加入ユーザー】
 
 email: b@b.b
 
@@ -370,6 +372,8 @@ pass: bbb111
 
 ## ローカルでの動作方法
 
+・動作環境
+
 Mac OS Big Sur 11.4
 
 Ruby 2.6.5
@@ -379,6 +383,10 @@ Ruby on Rails 6.0.0
 Ruby Gems 3.0.3
 
 MySQL 5.6.1
+
+
+
+手順
 
 $ git clone https://github.com/RyousukeOkazaki/band-starter-36553.git
 
