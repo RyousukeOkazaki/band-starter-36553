@@ -1,23 +1,38 @@
 
 
 <div class="background">
-<%= link_to 'ルーム名を変える', edit_room_path(@room) %>
-<%= link_to 'ルームを削除する', room_path(@room), method: :delete %>
-<div>ルーム名: <%= @room.name %></div>
-<% @room.users.each do |user| %>
-<div>参加者: <%= user.nickname %></div>
-<% end %>
+  <div class="room-show-top-wrapper">
+    <div class="room-show-logo"><%= @room.name %></div>
+    <div class="room-right">
+      <div class="room-show-select-block">
+        <div><span class="room-show-select-point">> </span><%= link_to 'なまえをかえる', edit_room_path(@room),class:"room-show-select-edit" %></div>
+        <div><span class="room-show-select-point">> </span><%= link_to 'へやをけす', room_path(@room), method: :delete,class:"room-show-select-delete" %></div>
+      </div>
+    </div>
+  </div>
 
-<% if @messages %>
-  <div class="messagesArea"><%= render partial: "messages/message", locals: { messages: @messages} %></div>
-<% else %>
-  <p>まだやり取りはありません</p>
-<% end %>
+  <div class="room-show-wrapper">
+    <div class="room-show-top">
+      <div class="room-show-top-logo">Member</div>
+      <% @room.users.each do |user| %>
+      <div class="room-show-top-member"><%= user.nickname %></div>
+      <% end %>
+    </div>
 
-<%= form_with(model: [@room, @message], url: room_messages_path(@room), method: :post, id: "form") do |form| %>
-  <%= form.text_field :content, class: "inputMessage", id: "content" %>
-  <%= form.submit '投稿する' ,id: "submit" %>
-<% end %>
-<div>
-<%= link_to 'ルーム一覧に戻る', rooms_path %>
+  
+    <div class="room-show-contents">
+      <% if @messages %>
+      <div class="messagesArea"><%= render partial: "messages/message", locals: { messages: @messages} %></div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="room-show-form-block">
+    <%= form_with(model: [@room, @message], url: room_messages_path(@room), method: :post, id: "form") do |form| %>
+      <%= form.text_field :content, class: "room-show-form-box inputMessage", id: "content", placeholder: "にゅうりょくしてください" %>
+      <%= form.submit 'おくる' ,id: "submit", class:"room-show-form-submit" %>
+    <% end %>
+  </div>
+  
+  
 </div>

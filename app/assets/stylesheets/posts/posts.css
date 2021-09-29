@@ -55,7 +55,7 @@
   padding-top: 21px;
   border:aliceblue solid 1px;
   border-radius: 50%;
-  margin-top: 45px;
+  margin-top: 60px;
   /* サイドボタンの上下間隔、margin-topのみで微調整可 */
   /* .bottom-user-dataのmargin-topと併せて調整推奨 */
   position: relative;
@@ -241,7 +241,8 @@ body {
   font-family: 'Corben', cursive;
   font-size: 100px;
   text-align: center;
-  padding-top: 80px;
+  padding-top: 140px;
+  /* 80pxから調整 */
   letter-spacing: 2px;
 }
 

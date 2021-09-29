@@ -36,7 +36,7 @@
     <% @posts.each do |post| %>
       <div class="post-block">
         <div class="post-title"><%= link_to "「#{post.title}(#{post.area_of_activity.name})」", post_path(post), class:"sub-contents post-title-link" %></div>
-        <div class="post-user"><%= link_to "by #{post.user.nickname}(#{(Date.today.strftime("%Y%m%d").to_i - post.user.date_of_birth.strftime("%Y%m%d").to_i)/ 10000}歳 #{post.user.sex.name})", user_path(post.user), class:"post-user-link" %></div>
+        <div class="post-user"><%= link_to "#{post.user.nickname}(#{(Date.today.strftime("%Y%m%d").to_i - post.user.date_of_birth.strftime("%Y%m%d").to_i)/ 10000}歳 #{post.user.sex.name})", user_path(post.user), class:"post-user-link" %></div>
       </div>
     <% end %>
   </div>

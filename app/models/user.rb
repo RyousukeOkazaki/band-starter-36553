@@ -15,9 +15,12 @@ class User < ApplicationRecord
   belongs_to :what_play
   has_one :as_leader
   has_one :as_member
-  has_many :user_rooms
-  has_many :rooms, through: :user_rooms
+  has_many :user_rooms, dependent: :destroy
+  # dependent追記。要動作確認
+  has_many :rooms, through: :user_rooms, dependent: :destroy
+  # dependent追記。要動作確認
   has_many :messages
+  # has_many :posts書き忘れ？要確認
 
   with_options presence:true do
     validates :nickname, :date_of_birth, :introduction

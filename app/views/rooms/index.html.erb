@@ -6,7 +6,7 @@
   <% if @userrooms.present? %>
     <div class="room-index-rooms">
       <% @userrooms.each do |userroom| %>
-        <div class="room-index-room">Room: <%= link_to "#{userroom.room.name}", room_path(userroom.room) %></div>
+        <div class="room-index-room"><%= link_to "#{userroom.room.name}", room_path(userroom.room),class:"room-index-room-link" %></div>
       <% end %>
     </div>
   <% end %>

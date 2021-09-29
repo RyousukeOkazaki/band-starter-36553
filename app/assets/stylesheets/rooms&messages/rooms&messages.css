@@ -106,3 +106,168 @@
 .room-index-box-bottom {
 
 }
+
+.room-index-rooms {
+  border-right: blanchedalmond 2px solid;
+  border-left: blanchedalmond 2px solid;
+  
+  width: 400px; 
+  margin: 30px auto;
+}
+
+.room-index-room {
+  border-top: solid 2px snow;
+  
+  height: 40px;
+  line-height: 40px;
+  
+}
+
+.room-index-room-link {
+  display: inline-block;
+  height: 40px;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  border-bottom: blanchedalmond 1px solid;
+  color: aliceblue;
+  background-color: black;
+}
+
+.room-index-room-link:hover {
+  background-color: dimgray;
+  transition: all 1s;
+}
+
+/* rooms/show */
+
+.room-show-logo {
+  margin: 50px auto;
+  height: 50px;
+  width: 400px;
+  text-align: center;
+  line-height: 50px;
+  background-color: rgb(3, 25, 48);
+  border: lightyellow 1px solid;
+  border-radius: 7px;
+}
+
+.room-show-wrapper {
+  display: flex;
+}
+
+.room-show-top {
+  margin: 50px auto;
+  height: 350px;
+  width: 30%;
+  text-align: center;
+  line-height: 40px;
+  background-color: rgb(3, 25, 48);
+  border: lightyellow 1px solid;
+  border-radius: 7px;
+}
+
+.room-show-top-logo {
+  border-bottom: lightyellow 1px solid;
+}
+
+.room-right {
+  display: flex;
+  margin: 0 10% 0 70%;
+}
+
+.room-show-select-block {
+  margin: 0  0 20px;
+  display: flex;
+  flex-direction: column;
+  width: 170px;
+  background-color: rgb(3, 25, 48);
+  border-radius: 7px;
+  border: aliceblue 1px solid;
+  color: antiquewhite;
+}
+
+.room-show-select-edit, .room-show-select-delete {
+  text-decoration: none;
+  color: rgb(185, 189, 192);
+}
+
+.room-show-select-edit:hover, .room-show-select-delete:hover {
+  background-color: rgb(108, 155, 202);
+  color: rgb(71, 125, 184);
+  transition: all 0.5s;
+}
+
+.room-show-select-point {
+  color: rgb(3, 25, 48);
+}
+
+.room-show-select-point:hover {
+  color: rgb(203, 209, 216);
+}
+
+.room-show-contents {
+  margin: 50px auto;
+  padding: 10px 0;
+  height: 350px;
+  width: 70%;
+  text-align: center;
+  background-color: rgba(3, 25, 48,0.8);
+  border-radius: 7px;
+  border: lightyellow 1px solid;
+  border-radius: 7px;
+  overflow: scroll;
+}
+
+.room-show-content {
+  margin: 10px auto;
+  width: 500px;
+  text-align: center;
+  line-height: 50px;
+  background-color: rgb(3, 25, 48);
+  border: lightyellow 1px solid;
+  border-radius: 7px;
+}
+
+.room-show-form-block {
+  margin: 0 auto;
+  height: 40px;
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  border: aliceblue 1px solid;
+  text-align: center;
+  line-height: 40px;
+  background-color: rgba(3, 25, 48,0.8);
+  border-radius: 7px;
+}
+
+.room-show-form-box {
+  width: 250px;
+  text-align: center;
+  background-color: rgb(3, 25, 48);
+  border-radius: 7px;
+  /* border: aliceblue 1px solid; */
+  color: antiquewhite;
+  display: inline-block;
+}
+
+.room-show-form-submit {
+  width: 200px;
+  display: inline-block;
+  background-color: rgb(3, 25, 48);
+  border-radius: 7px;
+  border: aliceblue 1px solid;
+  color: antiquewhite;
+  
+}
+
+.room-show-form-box:hover {
+  background-color: rgba(69, 101, 134, 0.7);
+  transition: all 0.5s;
+}
+
+.room-show-form-submit:hover {
+  background-color: rgb(101, 121, 143);
+  transition: all 0.5s;
+}
