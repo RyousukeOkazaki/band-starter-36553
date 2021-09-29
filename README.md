@@ -49,6 +49,7 @@ Band Starter
 
 ・ユーザー登録2ページ目（募集）
 [![Image from Gyazo](https://i.gyazo.com/da7e72e9ade4c6adc98d1ab7d3db0f1a.gif)](https://gyazo.com/da7e72e9ade4c6adc98d1ab7d3db0f1a)
+
 ・ユーザー登録2ページ目（加入）
 <img width="1052" alt="スクリーンショット 2021-09-29 14 17 30" src="https://user-images.githubusercontent.com/88137414/135207726-17649547-5949-4285-9c44-b401d080ce58.png">
 
